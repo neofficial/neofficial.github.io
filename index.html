@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alina Kazieva - Product Designer</title>
+    <title>Alina Kazlova - Product Designer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -150,5 +150,27 @@
             </div>
         </footer>
     </div>
+
+    <div class="nda-label"><img src="images/lock.svg" alt="Lock" class="badge__icon" style="width: 1.25rem; height: 1.25rem;"> This project is protected by NDA</div>
+
+    <script>
+        document.querySelectorAll('.card').forEach(card => {
+            if (card.querySelector('.badge')) {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    this.classList.add('shake');
+                    setTimeout(() => {
+                        this.classList.remove('shake');
+                    }, 500);
+
+                    const ndaLabel = document.querySelector('.nda-label');
+                    ndaLabel.classList.add('show');
+                    setTimeout(() => {
+                        ndaLabel.classList.remove('show');
+                    }, 2000);
+                });
+            }
+        });
+    </script>
 </body>
 </html>
