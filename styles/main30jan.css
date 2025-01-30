@@ -139,7 +139,7 @@ body {
   cursor: pointer;
 }
 
-.card:hover {
+.card:not(.card--nda):hover {
   transform: scale(1.02);
 }
 
@@ -178,6 +178,18 @@ body {
 }
 
 .badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  color: var(--color-text);
+  color: #fff;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.badge-nice {
   position: absolute;
   top: 1.5rem;
   right: 1.5rem;
