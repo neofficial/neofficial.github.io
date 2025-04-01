@@ -1,0 +1,394 @@
+/* Base styles */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Base styles */
+@font-face {
+  font-family: "Inter";
+  src: url("../fonts/Inter-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Mori";
+  src: url("../fonts/PPMori-SemiBold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Editorial New";
+  src: url("../fonts/PPEditorialNew-UltralightItalic.woff2") format("woff2");
+  font-weight: 200;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "PP Neue Montreal";
+  src: url("../fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --color-text: #000000;
+  --color-background: #ffffff;
+  --color-primary: #000000;
+  --color-secondary: #666666;
+  --color-accent: #f5f5f5;
+  --border-radius: 1.5rem;
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'PP Neue Montreal', serif;
+  color: #000;
+  background-color: #fff;
+  /* line-height: 1.2; */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header styles */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 0;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.header__title {
+  font-weight: normal;
+  /* margin-bottom: 40px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.header__greeting {
+  line-height: 62px;
+  font-size: 64px;
+  margin-bottom: 110px;
+}
+
+.header__name {
+  font-size: 48px;
+  display: none; /* Hidden in the design but included for SEO */
+}
+
+.header__description {
+  font-size: 64px;
+  line-height: 62px;
+  /* margin-bottom: 20px; */
+  max-width: 800px;
+}
+
+.header__year {
+  font-size: 48px;
+}
+
+.header__location {
+  font-size: 48px;
+  /* margin-bottom: 40px; */
+}
+
+.header__contact {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header__contact-text {
+  font-family: 'PP Editorial New', sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  font-size: 48px;
+}
+
+.header__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.header__avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Footer styles */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+  border-top: 1px solid #eaeaea;
+}
+
+.footer__links {
+  display: flex;
+  gap: 20px;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer__link img {
+  width: 12px;
+  height: 12px;
+}
+
+.footer__copyright {
+  font-size: 14px;
+  color: #666;
+}
+
+.footer__info {
+  text-align: right;
+}
+
+.footer__contact {
+  color: #000;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer__contact-link {
+  text-decoration: underline;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 220px;
+}
+
+.item__name {
+  font-size: 48px;
+  line-height: 62px;
+  font-family: 'PP Editorial New', sans-serif;
+  font-style: italic;
+  font-weight: 200;
+  margin-bottom: 32px;
+}
+
+.item__description {
+  font-size: 64px;
+  line-height: 62px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  max-width: 800px;
+}
+
+.item__sub-description {
+  font-size: 44px;
+  line-height: 45px;
+  font-family: 'PP Neue Montreal', sans-serif;
+  font-weight: 500;
+  max-width: 350px;
+  margin-top: 30px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .header__greeting,
+  .header__description,
+  .header__year,
+  .header__location {
+      font-size: 64px;
+      line-height: 62px;
+  }
+  
+  .header__contact-text {
+      font-size: 24px;
+  }
+  
+  .footer {
+      flex-direction: column;
+      gap: 20px;
+      text-align: center;
+  }
+  
+  .footer__info {
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .header__greeting,
+  .header__description,
+  .header__year,
+  .header__location {
+      font-size: 28px;
+  }
+  
+  .header__contact-text {
+      font-size: 20px;
+  }
+  
+  .header__avatar {
+      width: 50px;
+      height: 50px;
+  }
+}
+
+// card & badges
+
+.portfolio__row {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(12, 1fr);
+  /* margin-bottom: 2rem; */
+}
+
+.card {
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  /* min-height: 300px; */
+  width: 100%;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  margin-top: 100px;
+  padding-bottom: -20px;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card--large {
+  grid-column: span 8;
+}
+
+.card--small {
+  /* grid-column: span 4; */
+  height: 400px;
+  width: 400px !important;
+}
+
+.card__content {
+  position: absolute;
+  z-index: 1;
+  padding: 1.5rem;
+}
+
+.card__title {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  font-weight: normal;
+  /* opacity: 0.8; */
+}
+
+.card__subtitle {
+  font-size: 0.8125rem;
+  line-height: 1.3;
+  /* opacity: 0.6; */
+  /* margin-top: 0.1rem; */
+}
+
+.card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: -4px;
+}
+
+.badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 1;
+  color: var(--color-text);
+  color: #fff;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.badge__icon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: 0.25rem;
+}
+
+.badge__text {
+  text-align: center;
+}
+
+/* Card variations */
+.card--dark {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.card--light {
+  background-color: var(--color-accent);
+}
+
+.card--pink {
+  background-color: #fff1f1;
+  color: #830227;
+}
+
+.card--yellow {
+  background-color: #fffbe6;
+}
+
+.card--blue {
+  background-color: #e6f4ff;
+}
+
+.card--green {
+  background-color: #004d40;
+  color: var(--color-background);
+}
+
+.badge--dark {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+}
+
+.badge--green {
+  background-color: #00796b;
+  color: var(--color-background);
+}
+
+.badge--light {
+  background-color: var(--color-background);
+  color: var(--color-text);
+}
