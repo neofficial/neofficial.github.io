@@ -127,6 +127,12 @@ body {
   font-style: italic;
   font-weight: 200;
   font-size: 48px;
+  color: #000;
+  text-decoration: none;
+}
+
+.header__contact-text:hover {
+  text-decoration: underline;
 }
 
 .header__avatar {
