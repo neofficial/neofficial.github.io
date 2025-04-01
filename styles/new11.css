@@ -248,12 +248,13 @@ body {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 530px) {
   .header__greeting,
   .header__description,
   .header__year,
   .header__location {
-      font-size: 28px;
+      font-size: 44px;
+      line-height: 45px;
   }
   
   .header__contact-text {
@@ -264,9 +265,32 @@ body {
       width: 50px;
       height: 50px;
   }
+
+  .card {
+    max-width: 300px !important;
+    max-height: 300px !important;
+  }
+
+  .item__name {
+    font-size: 32px;
+    line-height: 33px;
+  }
+
+  .item__description {
+    font-size: 32px;
+    line-height: 33px;
+  }
+
+  .item__sub-description {
+    font-size: 20px;
+    line-height: 21px;
+  }
 }
 
 // card & badges
+/* .portfolio {
+  margin: 0 auto;
+} */
 
 .portfolio__row {
   display: grid;
